@@ -1,0 +1,41 @@
+关于如何部署本应用
+
+1。配置系统环境LNMP
+	即采用linux nginx mysql php架构
+	可以通过使用http://lnmp.org/ 提供的一键安装包实现配置。
+
+2. apache.nutch 与 apache.solr
+	于http://www.apache.org/dyn/closer.cgi/nutch/ 处获得最新nutch bin包，解压于任意文件目录
+	解压后 cd nutch或者nutch/runtime/local 并且更改权限 chmod +x bin/nutch
+	配置JAVAHOME：export JAVA_HOME=“你服务器中的JAVAHOME位置”
+	打开搜索引擎站点配置：vi conf/nutch-site.xml
+	configuration中填入并保存：
+	<property>
+	<name>http.agent.name</name>
+	<value>Abcaster</value>
+	</property>
+	新建起始目录与种子文件：
+	mkdir urls
+	vi urls/seed.txt
+	输入起始URL并保存：http://www.bilibili.tv
+	编辑正则匹配式：
+	vi conf/regex-urlfilter.txt 
+	在文档尾部更改+.为+^http://www\.bilibili\.tv/*
+	
+	
+
+	于http://lucene.apache.org/solr/ 处获得最新solr包，解压于任意文件目录
+	解压后 cd solr/example
+	启动solr索引服务器，java -jar start.jar
+
+	对网站执行爬取命令并建立索引：
+	cd nutch
+	bin/nutch crawl urls -solr http://localhost:8983/solr/ -depth 3 -topN 5
+	其中depth为抓取深度、topN为页面数量上限 而URL为solr服务器所在地址
+
+	更多内容详见http://nutch.apache.org/ 与 http://wiki.apache.org/nutch/NutchTutorial
+
+3. abcaster
+	下载github上的所有php以及css文件，部署于Web服务器的任意同目录下。如/home/wwwroot/abcaster/
+	配置index.php中的ip地址为solr服务器所在地址。
+	访问index.php即可使用。
