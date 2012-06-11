@@ -9,6 +9,18 @@ body {
 	text-align:left;
 	-webkit-text-size-adjust:none
 }
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 150px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;} 
+
 #top{
 	height:8px;
 	background:#65a9e6;
@@ -22,7 +34,6 @@ body {
 	padding: 0;
 }
 #header #logoarea{
-	float:left;
 	width: 980px;
 	height: 60%;
 	background: url(http://static.loli.my/images/header/bilibili_chun2_128color.png) no-repeat center top transparent;
@@ -37,6 +48,7 @@ body {
 	width: 980px;
 	height: 40%;
 	background:#0c6;
+	margin:0 auto;
 }
 #main{
 	width: 80%;
@@ -47,7 +59,7 @@ body {
 	float:left;
 	width:80%;
 	height:auto;
-	font-size:18px;
+	font-size:20px;
 	padding:1%
 }
 #main #info{
@@ -60,6 +72,12 @@ body {
 #sider{
 	float:right;
 	width: 20%;
-	height: 950px;
+	height:0px;
 	background:#03e;
+}
+
+#welcome{
+	font-size:28px;color:#333;
+	font-family:Î¢ÈíÑÅºÚ,Arial;
+	width:80%;
 }

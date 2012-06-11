@@ -12,7 +12,7 @@
 		<div id="logoarea"></div>
 		<div id="banner">
 			<form style="margin:auto;" action="index.php" method="get">
-				<input style="margin: 40px auto auto 100px;width: 450px;height: 22px;" type="text" name="Search" />
+				<input style="margin:20 450 auto auto;" type="text" name="Search" />
 				<input style="margin:auto;" type="submit" value="Submit" />
 			</form>
 		</div>
