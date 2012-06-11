@@ -74,7 +74,7 @@ if(!empty($_GET["Search"])){
 
 else echo
 "<div id=\"welcome\">
-欢迎使用 聚焦搜索引擎 <br/>
+欢迎使用聚焦搜索引擎<br/>
 您现在可以在搜索框内尝试搜索，如“弹幕”、“全息”等关键字，按提交可以获得相应视频的元数据信息。<br/>
 想获得本应用更多信息以及代码请访问<a href=\"https://github.com/tcz001/abcaster\">https://github.com/tcz001/abcaster</a><br/>
 </div>";

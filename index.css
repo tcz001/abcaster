@@ -14,10 +14,10 @@ html, body {height: 100%;}
 #wrap {min-height: 100%;}
 
 #main {overflow:auto;
-	padding-bottom: 150px;}  /* must be same height as the footer */
+	padding-bottom: 150px;}
 
 #footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
+	margin-top: -150px;
 	height: 150px;
 	clear:both;} 
 
@@ -59,7 +59,7 @@ html, body {height: 100%;}
 	float:left;
 	width:80%;
 	height:auto;
-	font-size:20px;
+	font-size:18px;
 	padding:1%
 }
 #main #info{
